@@ -1,4 +1,5 @@
 <?php
+session_start();
     //Inclusion de archivo de conexion con la base de datos
     require 'conexion.php';
 
@@ -16,17 +17,20 @@
         //Preparamos una consulta SQL segura
         $consulta = $conexion->prepare("INSERT INTO clientes (cedula, nombre, correo, modelo_carro, color_carro, placa_carro) VALUES (?, ?, ?, ?, ?, ?)");
 
-        //"ss" indica que se envia dos cadenas de texto
+        //"issssss" indica que se envia 7 cadenas de texto
         $consulta->bind_param("isssss", $cedula, $nombre, $correo, $modelo_carro, $color_carro, $placa_carro);
+
+        $_SESSION['cedula'] = $cedula;
+        $_SESSION['nombre'] = $nombre;
 
         //Ejecutando la consulta
         if ($consulta->execute()){
-            //Si se inserta, redirigimos al usuario a la pagini listar
-            header("Location: listar.php");
+            //Si se inserta, redirigimos al usuario a la pagina de bienvenida
+            header("Location: bienvenida.php");
         }else{
             //Si hubo error, lo mostramos
             echo "Error al inscribirse: " . $consulta->error;
-        }
+        }        
 
         //Cerramos la consulta y conexion
         $consulta->close();

@@ -54,9 +54,9 @@
               <input type="text" name="placa_carro" class="form-control" required />
             </div>
 
-            <button type="submit" class="btn btn-success">Inscribirse</button>
-            <a href="listar.php" class="btn btn-link">Ver inscritos</a>
+            <button type="submit" class="btn btn-success">Inscribirse</button>  
           </form>
+          <a href="listar.php" class="btn btn-link">Ver inscritos</a>
         </div>
       </div>
 
