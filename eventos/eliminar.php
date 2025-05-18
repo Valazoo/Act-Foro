@@ -1,5 +1,6 @@
 <?php
 require 'conexion.php';
+//Elimina usuario
 if (isset($GET['cedula']));{
     $cedula = $_GET['cedula'];
 

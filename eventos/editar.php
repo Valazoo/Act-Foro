@@ -86,7 +86,7 @@ if (!isset($cedula)) $cedula = "";
       </div>
     </div>
 
-    <!-- Imagen a la derecha -->
+    <!-- Imagen en edicion de usuario -->
     <div class="col-md-6 d-md-flex align-items-center justify-content-center">
       <img src="imagen.jpg" alt="Imagen decorativa" 
            class="img-fluid border border-4 border-secondary rounded-5"

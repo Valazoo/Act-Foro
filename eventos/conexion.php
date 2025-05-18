@@ -5,7 +5,7 @@
     $contraseña = "";
     $bd = "tarea_bd";
 
-    //Crear el obejot conexion a la base
+    //Crear el objeto conexion a la base de datos
     $conexion = new mysqli($host, $usuario, $contraseña, $bd);
 
     //Verificar error de conexion
